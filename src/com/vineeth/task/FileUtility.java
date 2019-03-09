@@ -3,7 +3,6 @@ package com.vineeth.task;
 import com.vineeth.domain.Task;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -39,20 +38,6 @@ public class FileUtility {
     }
 
     public String fetchTasks() throws IOException {
-
-        /*BufferedReader reader = new BufferedReader(new FileReader(
-                "MyTasks.csv"));
-        String line = reader.readLine();
-        while (line != null) {
-            String[] taskElements = line.split(",");
-            Task task = new Task(taskElements[0], taskElements[1], taskElements[2], taskElements[3]);
-            taskList.add(task);
-            // read next line
-            line = reader.readLine();
-        }
-        reader.close();
-
-        return taskList;*/
         String tasks = "";
         Scanner scanner = new Scanner(new File("MyTasks.csv"));
         scanner.useDelimiter(",");
